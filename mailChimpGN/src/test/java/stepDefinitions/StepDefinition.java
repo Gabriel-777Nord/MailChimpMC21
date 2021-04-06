@@ -28,6 +28,7 @@ public class StepDefinition {
 		public void teardown() {
 			driver.quit();
 		}
+		//tjolahopp
 		
 		@Given("I want to enter my {string}")
 		public void i_want_to_enter_my_(String mail) {
