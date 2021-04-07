@@ -6,8 +6,8 @@ Feature: Account creation
     Given I want to enter my "<email>"
     And I then need to enter my "<username>" 
     Given I also want to enter my "<password>"
-    Then Lastly I verify
+    Then Lastly I verify with "<check>"
 
     Examples: 
-      | email  | username | password  |
-      | Gabbe |    Gabbegabbe | säkert |
+      | email  | username | password  | check |
+      | Gabbe@gmail.com |    Gabbegabbe | Super_sa:k3rt | a few things could have happened: |
