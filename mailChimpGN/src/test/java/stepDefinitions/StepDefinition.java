@@ -66,15 +66,21 @@ public class StepDefinition {
 			click(By.id("create-account"));
 			}
 
-
+		//verifierar att man kommer till rätt sida om testfallet går igenom
 		@Then("I get succes Lastly I verify with {string}")
 		public void lastly_i_verify_with_(String check) {
-			WebElement doable = driver.findElement(By.xpath("//*[text()='Check your email']"));
-			doable.isDisplayed();
+			WebElement doable = driver.findElement(By.xpath("//*[text()='" + check + "']"));
 			assertEquals(check,doable.getText());
-			//By.cssSelector("input[text='Check your email']"
 		}
-		
+	
+		//verifierar att man får rätt felmeddelande
+		@Then("I get fail Lastly I verify with {string}")
+		public void i_get_fail_lastly_i_verify_with(String check) {
+			WebElement doable = driver.findElement(By.xpath("//*[text()='" + check + "']"));
+			assertEquals(check,doable.getText());
+		}
+
+
 		//Slumpar fram ett tal som används fr att få lösenord och email dynamiska.
 		private int numgen() {
 			double num = (Math.random()*1000000);
