@@ -6,8 +6,10 @@ Feature: Account creation
     Given I want to enter my "<email>"
     And I then need to enter my "<username>" 
     Given I also want to enter my "<password>"
-    Then Lastly I verify with "<check>"
+    When I am done entering my info i click Sign Up
+    Then I get <status> Lastly I verify with "<check>"
+    
 
     Examples: 
-      | email  | username | password  | check |
-      | Gabbe@gmail.com |    Gabbegabbe | Super_sa:k3rt | a few things could have happened: |
+      | email  | username | password  | status | check |
+      | Gabbe@gmail.com |    Gabbegabbe | Super_sa:k3rt | succes | Check your email |
